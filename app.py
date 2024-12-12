@@ -19,4 +19,4 @@ chat_llm = AzureChatOpenAI(
 str_Input = st.text_input("Write your qusetion")
 
 # Print the response from AzureChatOpenAI for the same question
-print("AzureOpenAI ChatLLM Response: ", chat_llm.predict(str_Input)
+st.write("AzureOpenAI ChatLLM Response: ", chat_llm.predict(str_Input)
