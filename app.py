@@ -19,7 +19,7 @@ chat_llm = AzureChatOpenAI(
     openai_api_type=st.secrets["AZURE_OPENAI_API_TYPE"],
     deployment_name="gpt-4o-batch3"  
 )
-str_Input = st.text_input("Write your qusetion")
+str_Input = st.text_input("Post Your Queries:")
 
 # Print the response from AzureChatOpenAI for the same question
 st.write("AzureOpenAI ChatLLM Response: ", chat_llm.predict(str_Input))
