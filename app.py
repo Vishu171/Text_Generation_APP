@@ -11,7 +11,7 @@ prompt = "Complete the following: Once upon a time there was a"
 messages = [{"role": "user", "content": prompt}]
 
 # make completion
-completion = client.chat.completions.create(model='text-embedding-batch3', messages=messages)
+completion = openai.chat.completions.create(model='text-embedding-batch3', messages=messages)
 
 # print response
 print(completion.choices[0].message.content)
