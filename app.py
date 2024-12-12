@@ -20,7 +20,7 @@ chat_llm = AzureChatOpenAI(
     openai_api_key=OPENAI_API_KEY,
     openai_api_base=OPENAI_API_BASE,
     openai_api_type=OPENAI_API_TYPE,
-    deployment_name="testing"  
+    deployment_name="gpt-4o-batch3"
 )
 
 # Print the response from AzureChatOpenAI for the same question
