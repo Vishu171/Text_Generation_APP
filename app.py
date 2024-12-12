@@ -2,10 +2,10 @@ from langchain.chat_models import AzureChatOpenAI
 import openai
 import streamlit as st
 # Set the OpenAI library configuration using the retrieved environment variables
-openai.api_type = AZURE_OPENAI_API_KEY
-openai.api_base = AZURE_OPENAI_API_BASE
-openai.api_version = AZURE_OPENAI_API_VERSION
-openai.api_key = AZURE_OPENAI_API_KEY
+openai.api_type = st.secrets["AZURE_OPENAI_API_KEY"]
+openai.api_base = st.secrets["AZURE_OPENAI_API_BASE"]
+openai.api_version = st.secrets["AZURE_OPENAI_API_VERSION"]
+openai.api_key = st.secrets["AZURE_OPENAI_API_KEY"]
 
 # Initialize an instance of AzureChatOpenAI using the specified settings
 chat_llm = AzureChatOpenAI(
