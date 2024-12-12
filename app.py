@@ -7,9 +7,9 @@ import streamlit as st
 # Initialize an instance of AzureChatOpenAI using the specified settings
 chat_llm = AzureChatOpenAI(
     openai.api_type = st.secrets["AZURE_OPENAI_API_KEY"],
-openai.api_base = st.secrets["AZURE_OPENAI_API_BASE"],
-openai.api_version = st.secrets["AZURE_OPENAI_API_VERSION"],
-openai.api_key = st.secrets["AZURE_OPENAI_API_KEY"],
+   openai.api_base = st.secrets["AZURE_OPENAI_API_BASE"],
+   openai.api_version = st.secrets["AZURE_OPENAI_API_VERSION"],
+   openai.api_key = st.secrets["AZURE_OPENAI_API_KEY"],
     deployment_name="gpt-4o-batch3"
 )
 
