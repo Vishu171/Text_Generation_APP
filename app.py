@@ -2,17 +2,14 @@ from langchain.chat_models import AzureChatOpenAI
 import openai
 import streamlit as st
 # Set the OpenAI library configuration using the retrieved environment variables
-openai.api_type = st.secrets["AZURE_OPENAI_API_KEY"]
-openai.api_base = st.secrets["AZURE_OPENAI_API_BASE"]
-openai.api_version = st.secrets["AZURE_OPENAI_API_VERSION"]
-openai.api_key = st.secrets["AZURE_OPENAI_API_KEY"]
+
 
 # Initialize an instance of AzureChatOpenAI using the specified settings
 chat_llm = AzureChatOpenAI(
-    openai_api_version=OPENAI_API_VERSION,
-    openai_api_key=OPENAI_API_KEY,
-    openai_api_base=OPENAI_API_BASE,
-    openai_api_type=OPENAI_API_TYPE,
+    openai.api_type = st.secrets["AZURE_OPENAI_API_KEY"],
+openai.api_base = st.secrets["AZURE_OPENAI_API_BASE"],
+openai.api_version = st.secrets["AZURE_OPENAI_API_VERSION"],
+openai.api_key = st.secrets["AZURE_OPENAI_API_KEY"],
     deployment_name="gpt-4o-batch3"
 )
 
