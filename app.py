@@ -5,14 +5,20 @@ import streamlit as st
 
 
 # Initialize an instance of AzureChatOpenAI using the specified settings
+# chat_llm = AzureChatOpenAI(
+#     openai.api_type = st.secrets["AZURE_OPENAI_API_TYPE"],
+#    openai.api_base = st.secrets["AZURE_OPENAI_API_BASE"],
+#    openai.api_version = st.secrets["AZURE_OPENAI_API_VERSION"],
+#    openai.api_key = st.secrets["AZURE_OPENAI_API_KEY"],
+#     deployment_name="gpt-4o-batch3"
+# )
 chat_llm = AzureChatOpenAI(
-    openai.api_type = st.secrets["AZURE_OPENAI_API_TYPE"],
-   openai.api_base = st.secrets["AZURE_OPENAI_API_BASE"],
-   openai.api_version = st.secrets["AZURE_OPENAI_API_VERSION"],
-   openai.api_key = st.secrets["AZURE_OPENAI_API_KEY"],
-    deployment_name="gpt-4o-batch3"
+    openai_api_version=st.secrets["AZURE_OPENAI_API_VERSION"],
+    openai_api_key=st.secrets["AZURE_OPENAI_API_KEY"],
+    openai_api_base=st.secrets["AZURE_OPENAI_API_BASE"],
+    openai_api_type=st.secrets["AZURE_OPENAI_API_TYPE"],
+    deployment_name="gpt-4o-batch3"  
 )
-
 str_Input = st.text_input("Write your qusetion")
 
 # Print the response from AzureChatOpenAI for the same question
