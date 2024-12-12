@@ -3,7 +3,7 @@ import openai
 import streamlit as st
 # Set the OpenAI library configuration using the retrieved environment variables
 
-st.header("AI-Powered Text Generatorion App")
+st.header("AI-Powered Text Generation App")
 
 # Initialize an instance of AzureChatOpenAI using the specified settings
 # chat_llm = AzureChatOpenAI(
